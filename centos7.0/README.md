@@ -15,3 +15,6 @@ force_https_protocol=PROTOCOL_TLSv1_2
 in
 
 /etc/ambari-agent/conf/ambari-agent.ini
+
+
+Reference: https://github.com/adaltas/jumbo/issues/12
