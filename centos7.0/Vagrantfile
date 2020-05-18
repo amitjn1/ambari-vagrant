@@ -7,8 +7,10 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "centos7.0"
-
+  #config.vm.box = "centos7.0"
+  #use oracle linux since the above box is not available
+  config.vm.box = "oraclelinux/7"
+  
   # Fixes changes from https://github.com/mitchellh/vagrant/pull/4707
   config.ssh.insert_key = false
 
@@ -16,7 +18,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
 
   # CentOS 7.0 x86_64
-  config.vm.box_url = "http://cloud.terry.im/vagrant/oraclelinux-7-x86_64.box"
+  #config.vm.box_url = "http://cloud.terry.im/vagrant/oraclelinux-7-x86_64.box"
+  # fixed the link
+  config.vm.box_url = "https://oracle.github.io/vagrant-boxes/boxes/oraclelinux/7.json"
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", 3072] # RAM allocated to each VM
