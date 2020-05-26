@@ -22,11 +22,17 @@ INSTALLATION
   Reference: https://github.com/adaltas/jumbo/issues/12
 
 SQOOP
+
   MSSQL driver install
+  
     download sqljdbc_6.2.2.1_enu.tar.gz from microsoft
+    
     $ gzip -d sqljdbc_6.2.2.1_enu.tar.gz
+    
     $ tar xf sqljdbc_6.2.2.1_enu.tar
+    
     $ sudo cp sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar /usr/hdp/3.1.4.0-315/sqoop/lib/
+    
     $ sqoop list-databases --connect jdbc:sqlserver://<IP address>:1433 --username <User> --password <Password>
     
     
